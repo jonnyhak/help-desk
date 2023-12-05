@@ -24,9 +24,9 @@ function ListTickets() {
 
     const getTickets = async () => {
         try {
-        //    const response = await fetch("http://localhost:5000/tickets")
+           const response = await fetch("http://localhost:5000/tickets")
         //    const response = await fetch("/tickets")
-           const response = await fetch("https://pern-helpdesk-f52ef804084b.herokuapp.com/tickets")
+        //    const response = await fetch("https://pern-helpdesk-f52ef804084b.herokuapp.com/tickets")
            const jsonData = await response.json()
            
            setTickets(jsonData)
