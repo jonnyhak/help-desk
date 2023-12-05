@@ -13,8 +13,8 @@ function InputTicket() {
         try {
             const body = {description, email, userName, status, reply};
             // const response = await fetch("http://localhost:5000/tickets", {
-            // const response = await fetch("/tickets", {
-            const response = await fetch("https://pern-helpdesk-f52ef804084b.herokuapp.com/tickets", {
+            const response = await fetch("/tickets", {
+            // const response = await fetch("https://pern-helpdesk-f52ef804084b.herokuapp.com/tickets", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
