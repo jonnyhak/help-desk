@@ -10,8 +10,8 @@ function ListTickets() {
 
     const deleteTicket = async id => {
         try {
-        //   const deleteTicket = await fetch(`http://localhost:5000/tickets/${id}`, {
-          const deleteTicket = await fetch(`/tickets/${id}`, {
+          const deleteTicket = await fetch(`http://localhost:5000/tickets/${id}`, {
+        //   const deleteTicket = await fetch(`/tickets/${id}`, {
         //   const deleteTicket = await fetch(`https://pern-helpdesk-f52ef804084b.herokuapp.com/tickets/${id}`, {
             method: "DELETE"
           });
@@ -24,8 +24,8 @@ function ListTickets() {
 
     const getTickets = async () => {
         try {
-        //    const response = await fetch("http://localhost:5000/tickets")
-           const response = await fetch("/tickets")
+           const response = await fetch("http://localhost:5000/tickets")
+        //    const response = await fetch("/tickets")
         //    const response = await fetch("https://pern-helpdesk-f52ef804084b.herokuapp.com/tickets")
            const jsonData = await response.json()
            
@@ -68,7 +68,7 @@ function ListTickets() {
         <table className="table mt-5 text-center">
             <thead>
                 <tr>
-                    <th>Id</th>
+                    {/* <th>Id</th> */}
                     <th>Name</th>
                     <th>Email</th>
                     <th>Description</th>
@@ -80,7 +80,7 @@ function ListTickets() {
             <tbody>
                 {filteredTickets.map(ticket => (
                     <tr key={ticket.ticket_id}>
-                        <td>{ticket.ticket_id}</td>
+                        {/* <td>{ticket.ticket_id}</td> */}
                         <td>{ticket.username}</td>
                         <td>{ticket.email}</td>
                         <td>{ticket.description}</td>

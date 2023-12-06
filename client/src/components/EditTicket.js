@@ -13,15 +13,15 @@ function EditTicket({ ticket }) {
 
             //proxy
 
-            // const response = await fetch(`http://localhost:5000/tickets/${ticket.ticket_id}`,{
-            const response = await fetch(`/tickets/${ticket.ticket_id}`,{
+            const response = await fetch(`http://localhost:5000/tickets/${ticket.ticket_id}`,{
+            // const response = await fetch(`/tickets/${ticket.ticket_id}`,{
             // const response = await fetch(`https://pern-helpdesk-f52ef804084b.herokuapp.com/tickets/${ticket.ticket_id}`,{
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)
             })
 
-            window.location = "/tickets"
+            window.location = "/ticketsList"
         } catch (err) {
             console.error(err.message)
         }

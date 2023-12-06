@@ -15,7 +15,7 @@ function App() {
             <Route exact path="/">
               <InputTicket />
             </Route>
-            <Route path="/tickets">
+            <Route path="/ticketsList">
               <ListTickets />
             </Route>
           </Switch>
